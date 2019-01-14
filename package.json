@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass src/scss/main.scss dist/css/style.css -w",
-    "devserver": "live-server --open=dist",
+    "devserver": "live-server --mount=/:dist",
     "start": "npm-run-all --parallel devserver watch:sass watch:html",
     "compile:sass": "node-sass src/scss/main.scss dist/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
